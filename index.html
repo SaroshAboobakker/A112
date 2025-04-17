@@ -2,18 +2,85 @@
 <html lang="en">
 
 <head>
-	<meta charset="utf-8">
-	<title>San Joaquin Valley Town Hall</title>
-	<link rel="shortcut icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="styles/c8_main.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>San Joaquin Valley Town Hall</title>
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="styles/c8_main.css">
+    <link rel="stylesheet" href="styles/slicknav.css">
+    
+    <style>
+        #mobile_menu {
+            display: none;
+        }
+
+        @media only screen and (max-width: 730px) {
+            section h1 {
+                font-size: 125%;
+            }
+            section h2, aside h2 {
+                font-size: 110%;
+            }
+            aside h3 a {
+                font-size: 85%;
+            }
+        }
+
+        @media only screen and (max-width: 645px) {
+            header img {
+                float: none;
+            }
+            header {
+                text-align: center;
+            }
+            section {
+                float: none;
+                width: 95%;
+            }
+            aside {
+                float: none;
+                width: 95%;
+                padding-right: 2.5%;
+            }
+            article img {
+                max-width: 30%;
+            }
+            aside {
+                column-count: 2;
+            }
+            #nav_menu {
+                display: none;
+            }
+            #mobile_menu {
+                display: block;
+            }
+            .slicknav_menu {
+                background-color: #800000 !important;
+            }
+        }
+
+        @media only screen and (max-width: 415px) {
+            body {
+                font-size: 90%;
+            }
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#nav_menu').slicknav({ prependTo: "#mobile_menu" });
+        });
+    </script>
 </head>
 
 <body>
-	<header>
-		<img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
-		<h2>San Joaquin Valley Town Hall</h2>
-		<h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
-	</header>
+    <header>
+        <img src="images/town_hall_logo.gif" alt="Town Hall logo" height="80">
+        <h2>San Joaquin Valley Town Hall</h2>
+        <h3>Celebrating our <span class="shadow">75<sup>th</sup></span> Year</h3>
+</header>
 	<nav id="nav_menu">
     	<ul>
         	<li><a href="index.html" class="current">Home</a></li>
